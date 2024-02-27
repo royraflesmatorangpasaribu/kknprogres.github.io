@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KKN DESA GEBANG PERIODE 1 TAHUN 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            width: 50px;
+            height: auto;
+        }
+
+        #countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+
+        .progress-bar-container {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #background {
+                padding: 10px;
+            }
+
+            .progress-bar-container {
+                width: 100%;
+            }
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td:first-child {
+            width: 20px;
+        }
+    </style>    
+</head>
+<body>
+    <nav>
+        <img src="unila.png" alt="navbar_logo">
+        <h1>KKN DESA GEBANG PERIODE 1 TAHUN 2024 UNIVERSITAS LAMPUNG</h1>
+        <img src="logokkn.png" alt="navbar_logo">
+    </nav>
+
+    <img src="kkn.jpg" alt="team_kkn" style="width:500px;height:300px;">
+    <h1>COUNT DOWN UNTUK SELESAIKAN LAPORAN AKHIR</h1>
+    
+    <div id="background">
+
+        <div id="countdown"></div>
+
+        <script>
+            var targetDate = new Date("Mar 1, 2024 00:00:00").getTime();
+
+            var countdownInterval = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = targetDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+
+    </div>
+
+    <h1>Progress Bar untuk Program Kerja</h1>
+
+    <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 85%; text-align: left;">Pelatihan Komputer - 85%</div>
+        <div class="progress-bar" style="width: 85%; text-align: left;">Eksperimen - 85%</div>
+        <div class="progress-bar" style="width: 40%; text-align: left;">Security Cyber - 40%</div>
+        <div class="progress-bar" style="width: 40%; text-align: left;">LCT - 40%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Rumah Baca - 35%</div>
+        <div class="progress-bar" style="width: 85%; text-align: left;">Mengaji - 85%</div>
+        <div class="progress-bar" style="width: 40%; text-align: left;">Pemilahan Sampah - 35%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Ecoenzyim - 35%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Cuci Tangan - 35%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Sabun - 35%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Perhit Cepat - 35%</div>
+        <div class="progress-bar" style="width: 35%; text-align: left;">Web - 35%</div>
+    </div>
+
+    <h1>KKN DESA GEBANG</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Instagram</td>
+                <td><a href="https://www.instagram.com/kkndesagebang2024">Instagram KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Video Akhir KKN</td>
+                <td><a href="https://youtu.be/snNo3GvVSck">Video KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Buguh</td>
+                <td><a href="https://drive.google.com/drive/folders/1oNWlmNCDugztPWcDvdz-_a4rntvkLNOS">Buguh KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Jurnal Harian</td>
+                <td><a href="https://docs.google.com/document/d/1dDrA5m-O2DUmOv3-
+                    KrWjMGTYMesp1TGi/editusp=sharing&ouid=114793022939356306917&rtpof=true&sd=t
+                    rue">Jurnal Harian KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Laporan No Fix</td>
+                <td><a href="https://docs.google.com/document/d/10ptOzswMURUhMdj-7BTE97MBBEYCw40AZSNDLMnDGUY/edit#heading=h.r2i2yq234ad5">Laporan KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>PPT Presentasi</td>
+                <td><a href="https://www.canva.com/design/DAF8LdO4pJI/XpkEv4WPLyrnLcnhVlqiwA/edit">PPT KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Sertifikat</td>
+                <td><a href="https://drive.google.com/drive/folders/1YCArMtjUAZ5le4leu55tTiEKAiWLrZKE?
+                    usp=sharing">Sertifikat KKN Desa Gebang</a></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Rencana</td>
+                <td><a href="https://docs.google.com/document/d/1ELmt6-
+                    u9QFUYPrlALUFFRUjPafhmytXS5kOFNK8EeEc/edit?usp=drive_link">Rencana KKN Desa Gebang</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
