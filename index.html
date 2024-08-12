@@ -80,6 +80,72 @@
         td:first-child {
             width: 20px;
         }
+
+        .arrows {
+            font-size: 40px;
+            color: #6c757d;
+            margin-bottom: 10px;
+            animation: moveArrows 1.5s infinite;
+        }
+        
+        @keyframes moveArrows {
+            0% { transform: translateY(-10px); }
+            50% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        
+        .button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .button:hover {
+            background-color: #218838;
+        }       
+        
+        #countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+        
+        #countdown {
+            display: flex;
+            gap: 10px;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+        
+        .time-unit {
+            text-align: center;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .time-unit span {
+            font-size: 2em;
+            display: block;
+        }
+        
+        .label {
+            font-size: 0.8em;
+            color: #ccc;
+        }
+        
     </style>    
 </head>
 <body>
@@ -90,14 +156,46 @@
     </nav>
 
     <img src="kkn.jpg" alt="team_kkn" style="width:400px;height:300px;">
-    <h1>COUNT DOWN UNTUK SELESAIKAN LAPORAN AKHIR</h1>
+    <h1>SELESAI</h1>
+   
+
+    <h3>ENJOY THIS VIDEO DOCUMENTARY OF KKN MEMORIES FROM DAY 1 TO DAY 38</h3>
+
+    <div class="arrows">
+        &darr; &darr; &darr;
+    </div>
     
+    <a href="https://youtu.be/5dwy5WbA0sw?si=DroxKTMatdABz-sH" target="_blank" class="button">Watch Video</a>
+    
+    <h5>Countdown To Happy New Year 2025</h5>
+
+    <div id="countdown-container">
+        <div id="countdown">
+            <div class="time-unit">
+                <span id="days"></span>
+                <div class="label">Hari</div>
+            </div>
+            <div class="time-unit">
+                <span id="hours"></span>
+                <div class="label">Jam</div>
+            </div>
+            <div class="time-unit">
+                <span id="minutes"></span>
+                <div class="label">Menit</div>
+            </div>
+            <div class="time-unit">
+                <span id="seconds"></span>
+                <div class="label">Detik</div>
+            </div>
+        </div>
+    </div>
+
     <div id="background">
 
         <div id="countdown"></div>
 
         <script>
-            var targetDate = new Date("Mar 5, 2024 00:00:00").getTime();
+            var targetDate = new Date("Jan 1, 2025 00:00:00").getTime();
 
             var countdownInterval = setInterval(function() {
                 var now = new Date().getTime();
@@ -108,13 +206,17 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
 
                 if (distance < 0) {
                     clearInterval(countdownInterval);
                     document.getElementById("countdown").innerHTML = "EXPIRED";
                 }
             }, 1000);
+
         </script>
 
     </div>
@@ -126,13 +228,13 @@
         <div class="progress-bar" style="width: 100%; text-align: left;">Eksperimen - 100%</div>
         <div class="progress-bar" style="width: 100%; text-align: left;">Security Cyber - 100%</div>
         <div class="progress-bar" style="width: 100%; text-align: left;">LCT - 100%</div>
-        <div class="progress-bar" style="width: 100%; text-align: left;">Rum Baca - 85%</div>
-        <div class="progress-bar" style="width: 85%; text-align: left;">Mengaji - 85%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Rum Baca - 100%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Mengaji - 100%</div>
         <div class="progress-bar" style="width: 100%; text-align: left;">Pemil Sampah - 100%</div>
-        <div class="progress-bar" style="width: 85%; text-align: left;">Ecoenzyim - 85%</div>
-        <div class="progress-bar" style="width: 85%; text-align: left;">Cuci Tangan - 85%</div>
-        <div class="progress-bar" style="width: 100%; text-align: left;">Sabun - 85%</div>
-        <div class="progress-bar" style="width: 85%; text-align: left;">Perhit Cepat - 85%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Ecoenzyim - 100%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Cuci Tangan - 100%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Sabun - 100%</div>
+        <div class="progress-bar" style="width: 100%; text-align: left;">Perhit Cepat - 100%</div>
         <div class="progress-bar" style="width: 100%; text-align: left;">Web - 100%</div>
     </div>
 
@@ -170,7 +272,7 @@
             <tr>
                 <td>5</td>
                 <td>Laporan No Fix</td>
-                <td><a href="https://docs.google.com/document/d/10ptOzswMURUhMdj-7BTE97MBBEYCw40AZSNDLMnDGUY/edit#heading=h.r2i2yq234ad5">Laporan KKN Desa Gebang</a></td>
+                <td><a href="https://docs.google.com/document/d/10ptOzswMURUhMdj-7BTE97MBBEYCw40AZSNDLMnDGUY/edit#heading=h.r2i2yq234ad">Laporan KKN Desa Gebang</a></td>
             </tr>
             <tr>
                 <td>6</td>
